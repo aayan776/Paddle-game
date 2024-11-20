@@ -52,7 +52,7 @@ class paddle(pygame.sprite.Sprite):
       self.rect.x -= 5
     if keys[pygame.K_RIGHT] and self.rect.right < 500:
       self.rect.x += 5
-def change_background_color(self):
+def change_background_color():
   global bg_color
   bg_color = [random.choice([BLUE, LIGHTBLUE, DARKBLUE])]
 #Initializee sprites
@@ -77,7 +77,7 @@ while not exit:
   keys = pygame.key.get_pressed()
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
-      exit = true
+      exit = True
     elif event.type == SPRITE_COLOR_CHANGE_EVENT:
       ball.change_color()
     elif event.type == BACKGROUND_COLOR_CHANGE_EVENT:
